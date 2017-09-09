@@ -9,6 +9,12 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { TopDestinationComponent } from './top-destination/top-destination.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { FooterComponent } from './footer/footer.component';
+import { LandingComponent } from './landing/landing.component';
+import { AppRoutes } from './app.routes';
+import { Error404Component } from './error-404/error-404.component';
+import { PaymentStepComponent } from './payment-step/payment-step.component';
+import { TransportSelectionStepComponent } from './transport-selection-step/transport-selection-step.component';
+import { ConfirmationStepComponent } from './confirmation-step/confirmation-step.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +23,21 @@ import { FooterComponent } from './footer/footer.component';
     SearchFormComponent,
     TopDestinationComponent,
     HowItWorksComponent,
-    FooterComponent
+    FooterComponent,
+    LandingComponent,
+    Error404Component,
+    PaymentStepComponent,
+    TransportSelectionStepComponent,
+    ConfirmationStepComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutes
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
