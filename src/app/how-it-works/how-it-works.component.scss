@@ -1,0 +1,55 @@
+.how-works {
+  background: white;
+}
+
+h2 {
+  text-align: center;
+  line-height: 150%;
+
+  strong {
+    font-size: 110%;
+  }
+}
+
+.how-works-content {
+  padding: 40px 10px;
+}
+
+.step-item {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.step-icon {
+  height: 130px;
+  line-height: 130%;
+  vertical-align: middle;
+
+  i.fa {
+    padding-top: 20px;
+  }
+}
+
+.step-item .title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+  padding-bottom: 5px;
+}
+
+.step-item .description {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  color: #333333;
+  width: 230px;
+  margin: auto;
+
+  strong {
+    font-weight: bolder;
+    color: red;
+    display: inline-block;
+  }
+}
+

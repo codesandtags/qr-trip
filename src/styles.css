@@ -1,1 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #eeeeee;
+}
+
 /* You can add global styles to this file, and also import other style files */
+.app-loading {
+  width: 100%;
+  height: 100%;
+  background: url('assets/images/road_trip_map_landing.jpg');
+  background-size: cover;
+  display: block;
+  /* min-height: 1000px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.app-loading p {
+  text-align: center;
+  color: black;
+  font-family: Courier;
+  font-size: 40px;
+  position: relative;
+  top: 10%;
+  text-shadow: 2px 5px 10px white;
+  font-weight: 500;
+}
+
+.app-loading .spin {
+  background: url('assets/images/qr_search.svg') no-repeat center;
+  background-size: 90%;
+  display: block;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 30%;
+  animation-name: spin;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.logo {
+  background: url('./assets/images/qr_search.svg') center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  float: left;
+  margin-right: 10px;
+  margin-top: -10px;
+}
+
+.line {
+  border: 1.5px solid red;
+  width: 200px;
+  margin: auto;
+}

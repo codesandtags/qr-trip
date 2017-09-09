@@ -1,0 +1,77 @@
+.top-destination-content {
+  padding: 40px 10px;
+}
+
+.destination {
+  margin-top: 20px;
+  border: 3px solid #5e5e5e;
+  padding: 0;
+  height: 206px;
+
+  .image {
+    width: 100%;
+    height: 200px;
+    background-size: cover !important;
+    z-index: 100;
+    position: relative;
+    transition: all 0.2s ease-in;
+    top: 0;
+  }
+
+  .information {
+    position: relative;
+    top: -38px;
+    height: 38px;
+    padding-left: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #eeeeee;
+    z-index: 200;
+    overflow: auto;
+    transition: all 0.2s ease-in;
+
+    .title {
+      display: block;
+      font-size: 22px;
+      font-weight: bolder;
+      color: #062c33;
+    }
+    .description {
+      font-size: 16px;
+      font-weight: 700;
+      color: #f30a2e;
+    }
+  }
+
+  &:hover {
+    .information {
+      height: 82px;
+      top: -82px;
+    }
+  }
+}
+
+h2 {
+  text-align: center;
+  line-height: 150%;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  text-align: left;
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
