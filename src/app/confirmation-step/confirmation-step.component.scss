@@ -4,8 +4,38 @@
 }
 
 h3 {
+  margin: 30px auto 50px;
+  text-align: center;
   .line {
-    margin-left: 20px;
-    margin-top: 10px;
+    margin: 10px auto;
   }
+}
+
+.congratulations {
+  text-align: center;
+  h3 {
+    .line {
+      margin: 10px auto;
+    }
+    margin: 30px auto;
+  }
+}
+
+.confirmation-details {
+  border: 1px solid #cacaca;
+  font-size: 18px;
+  padding: 10px;
+
+  .item {
+    .key {
+      width: 150px;
+      display: inline-block;
+      font-weight: bolder;
+      color: #3e7df3;
+    }
+  }
+}
+
+.qr-trip-content {
+  margin: 20px auto;
 }

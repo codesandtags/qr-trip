@@ -1,32 +1,91 @@
 <div class="container-fluid transport-selection-content">
   <h3>Selecciona la tarifa.
-    <br><div class="line"></div>
+    <br>
+    <div class="line"></div>
   </h3>
   <div class="summary-selection">
     <div class="row">
       <div class="col-xs-6 col-md-6">
-        Bogota
+        {{origin}}
         <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-        Cargena
+        {{destination}}
       </div>
       <div class="col-xs-6 col-md-6">
-        <strong>2</strong> Pasajero
+        <strong>{{passengers}}</strong> Pasajeros
       </div>
     </div>
   </div>
   <div class="fares">
-    <h4>Tarifas de ida, 9 Septiembre</h4>
-    <form action="">
-      <div class="fare-list">
-        <div class="fare-item">
-          <div class="hour">
-
+    <h4>Tarifas de ida : {{departureDate | date: 'dd - MMM'}}</h4>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="map-content">
+          <div class="image-place">
+            <img src="./assets/images/cities/bogota.jpg" alt="">
           </div>
         </div>
       </div>
-    </form>
+      <div class="col-md-8">
+        <div class="fare-list">
+          <div class="fare-head">
+            <div class="hour">Hora</div>
+            <div class="transport-company">Operador</div>
+            <div class="service-bus">Servicio</div>
+            <div class="fare-value">Tarifa</div>
+            <div class="fare-selection">Seleccionar</div>
+          </div>
+          <div class="fare-body">
+            <div class="fare-item" *ngFor="let fare of faresOrigin">
+              <div class="hour">{{fare.hour}}</div>
+              <div class="transport-company">{{fare.operator}}</div>
+              <div class="service-bus">{{fare.serviceBus}}</div>
+              <div class="fare-value">COP ${{fare.fareValue | number:'1.0'}}</div>
+              <div class="fare-selection text-center">
+                <input type="radio" name="fare-selection-departure" (click)="selectDepartureFare(fare)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="fares">
+    <h4>Tarifas de vuelta : {{arrivalDate | date: 'dd - MMM'}}</h4>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="map-content">
+          <div class="image-place">
+            <img src="./assets/images/cities/medellin.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="fare-list">
+          <div class="fare-head">
+            <div class="hour">Hora</div>
+            <div class="transport-company">Operador</div>
+            <div class="service-bus">Servicio</div>
+            <div class="fare-value">Tarifa</div>
+            <div class="fare-selection">Seleccionar</div>
+          </div>
+          <div class="fare-body">
+            <div class="fare-item" *ngFor="let fare of faresDestination">
+              <div class="hour">{{fare.hour}}</div>
+              <div class="transport-company">{{fare.operator}}</div>
+              <div class="service-bus">{{fare.serviceBus}}</div>
+              <div class="fare-value">COP ${{fare.fareValue | number:'1.0'}}</div>
+              <div class="fare-selection text-center">
+                <input type="radio" name="fare-selection-arrival" (click)="selectArrivalFare(fare)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-xs-12 col-md-12 text-center">
       <button class="btn btn-success" (click)="validateSelection()">Continuar</button>

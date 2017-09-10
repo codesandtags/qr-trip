@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { City } from '../../models/City';
 import { ApplicationConstants } from '../../models/ApplicationConstants';
 
@@ -11,9 +13,17 @@ import { ApplicationConstants } from '../../models/ApplicationConstants';
 })
 export class SearchFormComponent implements OnInit {
 
+  searchForm: FormGroup;
   public cities: Array<City>[];
 
-  constructor(private router: Router, private http: Http) {
+  constructor(private router: Router, private http: Http, private formBuilder: FormBuilder) {
+    this.searchForm = formBuilder.group({
+      'origin': [null, Validators.required],
+      'destination': [null, Validators.required],
+      'departureDate': [null],
+      'arrivalDate': [null],
+      'passengers': [null, Validators.required]
+    });
   }
 
   ngOnInit() {
@@ -21,7 +31,15 @@ export class SearchFormComponent implements OnInit {
   }
 
   public validateSearch(): void {
-    this.router.navigate(['/tarifas']);
+    if (this.searchForm.valid) {
+      this.saveInSessionStorage();
+      this.router.navigate(['/tarifas']);
+    }
+  }
+
+  public saveInSessionStorage() {
+    const searchTripData = JSON.stringify(this.searchForm.getRawValue());
+    sessionStorage.setItem('search_trip', searchTripData);
   }
 
   public getCities() {

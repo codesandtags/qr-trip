@@ -18,4 +18,30 @@ export class PaymentStepComponent implements OnInit {
     this.router.navigate(['/confirmacion']);
   }
 
+  selectPaymentMethod(payment) {
+    let paymentMethod;
+    let methodSelected = 'N/A';
+
+    switch (payment) {
+      case 'VISA':
+      case 'MASTERCARD':
+      case 'AMEX':
+        paymentMethod = 'CREDIT_CARD';
+        methodSelected = payment;
+        break;
+      case 'PSE':
+        paymentMethod = 'TRANSFER_BANK';
+        break;
+      default:
+        paymentMethod = 'CASH_IN_TERMINAL';
+    }
+
+    const paymentData = {
+      paymentMethod: paymentMethod,
+      methodSelected: methodSelected
+    };
+
+    sessionStorage.setItem('payment_data', JSON.stringify(paymentData));
+  }
+
 }

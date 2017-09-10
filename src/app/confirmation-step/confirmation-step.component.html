@@ -1,10 +1,107 @@
 <div class="container-fluid confirmation-content">
-  <h3>Confirma tu reserva.
-    <br><div class="line"></div>
-  </h3>
-  <div class="row">
-    <div class="col-xs-12 col-md-12 text-center">
-      <button class="btn btn-success" (click)="finishConfirmation()">Finalizar</button>
+  <div class="container-box">
+    <h3>Confirmación de tu reserva
+      <br>
+      <div class="line"></div>
+    </h3>
+
+    <h4 class="title">EDWIN,</h4>
+    <p class="description">
+      A continuación encontrarás los datos de tu reserva y el código <strong>QR Trip</strong> el cuál fue enviado a tu
+      email.
+    </p>
+
+    <div class="confirmation-details">
+      <div class="row">
+        <div class="col-xs-6 col-md-6">
+          <div class="item">
+            <span class="key">Origen</span>
+            <span class="value">{{qrTrip.searchTrip.origin}}</span>
+          </div>
+          <div class="item">
+            <span class="key">Fecha Salida:</span>
+            <span class="value">
+              {{qrTrip.searchTrip.departureDate | date:'dd - MMM'}},
+              {{qrTrip.departureFareData.hour}}
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">Tarifa ida:</span>
+            <span class="value">
+              COP ${{qrTrip.departureFareData.fareValue | number:'1.0'}}
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">Operador:</span>
+            <span class="value">
+              {{qrTrip.departureFareData.operator}}
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">Tipo Servicio</span>
+            <span class="value">
+              {{qrTrip.departureFareData.serviceBus}}
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">Pasajeros</span>
+            <span class="value">
+              {{qrTrip.searchTrip.passengers}}
+            </span>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <div class="item">
+            <span class="key">Destino</span>
+            <span class="value">{{qrTrip.searchTrip.destination}}</span>
+          </div>
+          <div class="item">
+            <span class="key">Fecha Regreso:</span>
+            <span class="value">
+              {{qrTrip.searchTrip.arrivalDate | date:'dd - MMM'}},
+              {{qrTrip.arrivalFareData.hour}}
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">Tarifa regreso:</span>
+            <span class="value">
+              COP ${{qrTrip.arrivalFareData.fareValue | number:'1.0'}}
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">Operador:</span>
+            <span class="value">
+              {{qrTrip.arrivalFareData.operator}}
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">Tipo Servicio</span>
+            <span class="value">
+              {{qrTrip.arrivalFareData.serviceBus}}
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="qr-trip-content text-center hidden-sm-down">
+      <img src="{{qrTripCode}}" alt="" width="300px">
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-12 congratulations">
+        <h3>Te deseamos un excelente viaje!
+          <br>
+          <div class="line"></div>
+        </h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-12 text-center">
+        <button class="btn btn-success" (click)="finishConfirmation()">Finalizar</button>
+      </div>
     </div>
   </div>
 </div>

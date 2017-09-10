@@ -10,10 +10,80 @@ h3 {
   }
 }
 
+h4 {
+  border-bottom: 1px solid #cacaca;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
 .summary-selection {
   padding: 20px;
   background: white;
   border: 1px solid #dddddd;
   border-radius: 4px;
   margin: 20px auto;
+}
+
+.fare-list {
+  display: table;
+  border: 1px solid #cacaca;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 30px;
+
+  .fare-head {
+    display: table-row;
+    background: #343a40;
+    color: white;
+
+    > div {
+      display: table-cell;
+      font-weight: bold;
+      padding: 7px;
+      text-align: center;
+    }
+  }
+
+  .fare-body {
+    display: table-row-group;
+    background: #f5f5f5;
+
+    .fare-item {
+      display: table-row;
+
+      &:nth-child(odd) {
+        background: #e6e6e6;
+      }
+
+      > div {
+        display: table-cell;
+        padding: 10px 5px;
+        border-bottom: 1px solid #999999;
+      }
+
+      .hour {
+        font-weight: bolder;
+      }
+
+      .fare-value {
+        color: #3e7df3;
+        font-weight: bold;
+      }
+    }
+
+  }
+}
+
+.map-content {
+  .image-place {
+    text-align: center;
+    img {
+      max-width: 250px;
+    }
+  }
+}
+
+input[type=radio] {
+  width: 20px;
+  height: 20px;
 }
