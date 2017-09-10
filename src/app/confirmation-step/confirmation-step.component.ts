@@ -36,6 +36,8 @@ export class ConfirmationStepComponent implements OnInit {
 
     this.qrTrip.departureFareData = departureFareData;
     this.qrTrip.arrivalFareData = arrivalFareData;
+    this.qrTrip.reservationValue = (this.qrTrip.searchTrip.passengers * 2000);
+    this.qrTrip.total = departureFareData.fareValue + arrivalFareData.fareValue + this.qrTrip.reservationValue;
   }
 
   public setPaymentData() {

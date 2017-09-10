@@ -26,12 +26,6 @@
             </span>
           </div>
           <div class="item">
-            <span class="key">Tarifa ida:</span>
-            <span class="value">
-              COP ${{qrTrip.departureFareData.fareValue | number:'1.0'}}
-            </span>
-          </div>
-          <div class="item">
             <span class="key">Operador:</span>
             <span class="value">
               {{qrTrip.departureFareData.operator}}
@@ -41,6 +35,12 @@
             <span class="key">Tipo Servicio</span>
             <span class="value">
               {{qrTrip.departureFareData.serviceBus}}
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">Tarifa ida:</span>
+            <span class="value">
+              COP ${{qrTrip.departureFareData.fareValue | number:'1.0'}}
             </span>
           </div>
           <div class="item">
@@ -63,12 +63,6 @@
             </span>
           </div>
           <div class="item">
-            <span class="key">Tarifa regreso:</span>
-            <span class="value">
-              COP ${{qrTrip.arrivalFareData.fareValue | number:'1.0'}}
-            </span>
-          </div>
-          <div class="item">
             <span class="key">Operador:</span>
             <span class="value">
               {{qrTrip.arrivalFareData.operator}}
@@ -78,6 +72,24 @@
             <span class="key">Tipo Servicio</span>
             <span class="value">
               {{qrTrip.arrivalFareData.serviceBus}}
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">Tarifa regreso:</span>
+            <span class="value">
+              COP ${{qrTrip.arrivalFareData.fareValue | number:'1.0'}}
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">Valor Reserva:</span>
+            <span class="value">
+              COP ${{qrTrip.reservationValue | number:'1.0'}}
+            </span>
+          </div>
+          <div class="item">
+            <span class="key">Total a pagar</span>
+            <span class="value">
+              COP ${{qrTrip.total | number:'1.0'}}
             </span>
           </div>
         </div>
