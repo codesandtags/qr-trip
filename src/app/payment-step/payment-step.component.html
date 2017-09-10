@@ -1,3 +1,59 @@
-<div class="container-fluid">
-  <button class="btn btn-success" (click)="validatePayment()">Realizar Pago</button>
+<div class="container-fluid payment-content">
+  <h3>Elige el medio de pago.
+    <br>
+    <div class="line"></div>
+  </h3>
+
+  <div class="container-box">
+    <div class="container credit-card">
+      <h4>Tarjeta Crédito</h4>
+      <div class="row">
+        <div class="col-xs-6 col-md-3 text-center">
+          <div class="card">
+            <div class="visa"></div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 text-center">
+          <div class="card">
+            <div class="amex"></div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-3 text-center">
+          <div class="card">
+            <div class="mastercard"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pse">
+      <h4>Pago bancario</h4>
+      <div class="row">
+        <div class="col-xs-6 col-md-3 text-center">
+          <div class="card">
+            <div class="pse"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container cash">
+      <h4>Efectivo</h4>
+      <div class="row">
+        <div class="col-xs-6 col-md-7 text-center">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">Prefiero pagar en la terminal de transportes.
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-12 text-center">
+        <button class="btn btn-success" (click)="validatePayment()">Realizar Pago</button>
+      </div>
+    </div>
+  </div>
 </div>

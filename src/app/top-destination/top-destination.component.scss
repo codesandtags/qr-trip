@@ -4,10 +4,10 @@
 
 .destination {
   margin-top: 20px;
-  border: 3px solid #727272;
+  border: 1px solid #727272;
   border-radius: 3px;
   padding: 0;
-  height: 206px;
+  height: 204px;
 
   .image {
     width: 100%;
@@ -25,7 +25,7 @@
     height: 38px;
     padding-left: 10px;
     background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee;
     z-index: 200;
     overflow: auto;
     transition: all 0.2s ease-in;

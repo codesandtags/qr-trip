@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-confirmation-step',
   templateUrl: './confirmation-step.component.html',
-  styleUrls: ['./confirmation-step.component.css']
+  styleUrls: ['./confirmation-step.component.scss']
 })
 export class ConfirmationStepComponent implements OnInit {
 

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-transport-selection-step',
   templateUrl: './transport-selection-step.component.html',
-  styleUrls: ['./transport-selection-step.component.css']
+  styleUrls: ['./transport-selection-step.component.scss']
 })
 export class TransportSelectionStepComponent implements OnInit {
 

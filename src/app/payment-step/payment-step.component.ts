@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-payment-step',
   templateUrl: './payment-step.component.html',
-  styleUrls: ['./payment-step.component.css']
+  styleUrls: ['./payment-step.component.scss']
 })
 export class PaymentStepComponent implements OnInit {
 

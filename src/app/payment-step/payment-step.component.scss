@@ -1,0 +1,68 @@
+.payment-content {
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+h3 {
+  .line {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+}
+
+h4 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #abaeb0;
+}
+
+.container.credit-card,
+.container.pse,
+.container.cash {
+  margin: 20px auto;
+}
+
+.card {
+  width: 110px;
+  height: 60px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 5px;
+  background: #f0f0f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .12), 0 0 2px 0 rgba(0, 0, 0, .14);
+
+  .visa {
+    width: 100%;
+    height: 100%;
+    background: url('./assets/images/payment/visa.png') center center no-repeat;
+    background-size: contain;
+  }
+
+  .mastercard {
+    width: 100%;
+    height: 100%;
+    background: url('./assets/images/payment/mastercard.png') center center no-repeat;
+    background-size: contain;
+  }
+
+  .amex {
+    width: 100%;
+    height: 100%;
+    background: url('./assets/images/payment/amex.png') center center no-repeat;
+    background-size: contain;
+  }
+
+  .pse {
+    width: 100%;
+    height: 100%;
+    background: url('./assets/images/payment/pse.png') center center no-repeat;
+    background-size: contain;
+  }
+}
+
+input[type=checkbox] {
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+  margin-right: 15px;
+}
